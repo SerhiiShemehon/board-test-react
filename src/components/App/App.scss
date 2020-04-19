@@ -1,0 +1,29 @@
+html, body, #root{
+	height: 100%;
+	background: #bef8e9;
+}
+.pade-layout{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&>*{
+		max-width: 100%;
+	}
+}
+
+.container{
+	width: 100%;
+	max-width: 1650px;
+	padding: 0 25px;
+	margin: 0 auto;
+}
+
+.main{
+	margin-bottom: 20px;
+	height: 100%;
+}
+
+.main-sheet{
+	width: 100%;
+}

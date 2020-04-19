@@ -1,0 +1,25 @@
+.post-item{
+	margin-bottom: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.post-title{
+	padding: 5px 70px 5px 10px;
+	position: relative;
+	.button-delete{
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+	}
+	.button-edit{
+		position: absolute;
+		top: 50%;
+		right: 40px;
+		transform: translateY(-50%);
+	}
+}
+.post-text{
+	padding: 10px;
+	background: rgba(255,255,255,0.7);
+}

@@ -1,0 +1,29 @@
+.button-add{
+	background: transparent;
+	border: 2px solid #16bf16;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50%;
+	line-height: 0;
+	font-size: 30px;
+	color: #16bf16;
+	padding: 0;
+	flex-shrink: 0;
+	outline: none;
+	font-size: 90%;
+	cursor: pointer;
+	transition: 0.3s;
+	position: relative;
+	&:hover{
+		background: #16bf16;
+		color: #bef8e9;
+	}
+	svg{
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		position: absolute;
+	}
+}

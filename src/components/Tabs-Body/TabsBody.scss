@@ -1,0 +1,21 @@
+.tabs-body{
+	position: relative;
+}
+.tabs-item{
+	border: 2px solid #8fedfd;
+	padding: 25px 20px;
+	border-radius: 15px;
+	background: #8fedfd;
+	opacity: 0;
+	transition: 0.3s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	visibility: hidden;
+	&.open{
+		position: static;
+		opacity: 1;
+		visibility: visible;
+	}
+}

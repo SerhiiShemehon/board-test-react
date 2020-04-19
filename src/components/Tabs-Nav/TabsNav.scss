@@ -1,0 +1,35 @@
+.tabs-nav{
+	list-style-type: none;
+	margin: 0;
+	padding: 0 10px;
+	display: flex;
+	align-items: flex-ends;
+	li{
+		margin: 0 5px;
+	}
+}
+.btn-tab{
+	transition: 0.3s;
+	background: #74fd8b;
+	border-radius: 10px 10px 0 0;
+	border: none;
+	padding: 10px 40px 10px 20px;
+	display: inline-block;
+	vertical-align: bottom;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 14px;
+	position: relative;
+	cursor: pointer;
+	&.open{
+		background: #8fedfd;
+		color: #fff;
+	}
+	.button-delete{
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		color: currentColor;
+	}
+}
