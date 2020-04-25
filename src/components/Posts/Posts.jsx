@@ -5,17 +5,30 @@ import './Posts.scss';
 import { ButtonAdd, PostItem } from '../'
 
 export const Posts = ({
-	posts,
-	id
+						  posts,
+						  id,
+						  createPostItem
 }) => {
+	const sortBy = (a,b) => {
+		let c = new Date(a.date);
+		let d = new Date(b.date);
+		return c-d;
+	}
 
 	return (
 		<div className="posts">
 			<div className="posts-holder">
-				{posts.map( (post) => <PostItem key={post.id} post={post} />)}
+				{posts
+					.sort(sortBy)
+					.map( (post) => <PostItem key={post.id} post={post} />)
+				}
 			</div>
 			<div className="text-center">
-				<ButtonAdd type="post" id={id} />
+				<ButtonAdd
+					type="post"
+					id={id}
+					createPostItem={createPostItem}
+				/>
 			</div>
 		</div>
 	)

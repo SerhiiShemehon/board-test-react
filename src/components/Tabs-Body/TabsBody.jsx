@@ -5,14 +5,23 @@ import './TabsBody.scss';
 import { Column } from '../'
 
 export const TabsBody = ({
-	tabs,
-	currentTab
+							 createColumnItem,
+							 createPostItem,
+							 tabs,
+							 currentTab,
+							 columns,
+							 posts
 }) => {
-
 	return (
 		<div className="tabs-body">
 			{tabs.map( (tab) => <div key={tab.id} className={currentTab === tab.id ? 'tabs-item open' : 'tabs-item'}>
-				<Column columns={tab.columns} id={tab.id} />
+				<Column
+					columns={columns}
+					posts={posts}
+					boardId={tab.id}
+					createColumnItem={createColumnItem}
+					createPostItem={createPostItem}
+				/>
 			</div> )}
 		</div>
 	)
