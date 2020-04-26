@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './TabsNav.scss';
 
 import { ButtonDelete } from '../'
@@ -8,7 +7,8 @@ const NavItemTab = ({
 	title,
 	id,
 	toggleTabs,
-	currentTab
+	currentTab,
+	deleteItem
 }) => {
 	const currentClass = currentTab === id ? 'btn-tab open' : 'btn-tab'
 
@@ -20,7 +20,11 @@ const NavItemTab = ({
 			}
 		>
 			{title}
-			<ButtonDelete type='board' id={id} />
+			<ButtonDelete
+				type='board'
+				deleteItem={deleteItem}
+				id={id}
+			/>
 		</div>
 	)
 }
@@ -28,7 +32,8 @@ const NavItemTab = ({
 export const TabsNav = ({
 	tabs,
 	currentTab,
-	toggleTabs
+	toggleTabs,
+	deleteItem
 }) => {
 	return (
 		<ul className="tabs-nav">
@@ -38,6 +43,7 @@ export const TabsNav = ({
 					id={nav.id}
 					toggleTabs={toggleTabs}
 					currentTab={currentTab}
+					deleteItem={deleteItem}
 				/>
 			</li> )}
 		</ul>

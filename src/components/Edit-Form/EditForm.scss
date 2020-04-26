@@ -1,0 +1,40 @@
+.edit-form{
+  width: 100%;
+  padding: 10px;
+  input, textarea{
+    font-family: inherit;
+    background: #fff;
+    padding: 1px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid #333;
+    outline: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  textarea{
+    min-height: 100px;
+    height: 100px;
+  }
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background: #16bf16;
+  border: none;
+  font-size: 12px;
+  min-width: 120px;
+}
+
+input{
+  &::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+  &::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+  &:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+  &:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+  &:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+  &:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+  &:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+  &:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+}

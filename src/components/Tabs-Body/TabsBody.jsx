@@ -10,7 +10,9 @@ export const TabsBody = ({
 							 tabs,
 							 currentTab,
 							 columns,
-							 posts
+							 posts,
+							 deleteItem,
+							 editPost
 }) => {
 	return (
 		<div className="tabs-body">
@@ -21,6 +23,8 @@ export const TabsBody = ({
 					boardId={tab.id}
 					createColumnItem={createColumnItem}
 					createPostItem={createPostItem}
+					deleteItem={deleteItem}
+					editPost={editPost}
 				/>
 			</div> )}
 		</div>

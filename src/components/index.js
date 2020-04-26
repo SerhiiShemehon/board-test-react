@@ -11,3 +11,4 @@ export * from './Column';
 export * from './Posts';
 export * from './Post-Item';
 export * from './Add-Form';
+export * from './Edit-Form';

@@ -10,7 +10,9 @@ export const Board = ({
 						  posts,
 						  createBoardItem,
 						  createColumnItem,
-						  createPostItem
+						  createPostItem,
+						  deleteItem,
+						  editPost
 }) => {
 	const [currentTab, changeTabs] = useState(boards[0].id);
 
@@ -26,6 +28,7 @@ export const Board = ({
 						tabs={boards}
 						currentTab={currentTab}
 						toggleTabs={toggleTabs}
+						deleteItem={deleteItem}
 					/>
 					<ButtonAdd
 						type="board"
@@ -40,6 +43,8 @@ export const Board = ({
 						currentTab={currentTab}
 						createColumnItem={createColumnItem}
 						createPostItem={createPostItem}
+						deleteItem={deleteItem}
+						editPost={editPost}
 					/>
 				</div>
 			</div>

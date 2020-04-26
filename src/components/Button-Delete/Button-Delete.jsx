@@ -6,13 +6,14 @@ import './Button-Delete.scss';
 
 export const ButtonDelete = ({
 	type,
+	deleteItem,
 	id = false
 }) => {
 
 	return (
 		<button
 			className="button-delete"
-			onClick={()=> console.log('delete '+type)}
+			onClick={()=> deleteItem(type, id)}
 		>
 			<FontAwesomeIcon icon={faTrashAlt} />
 		</button>

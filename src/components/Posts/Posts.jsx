@@ -7,7 +7,9 @@ import { ButtonAdd, PostItem } from '../'
 export const Posts = ({
 						  posts,
 						  id,
-						  createPostItem
+						  createPostItem,
+						  deleteItem,
+						  editPost
 }) => {
 	const sortBy = (a,b) => {
 		let c = new Date(a.date);
@@ -20,7 +22,12 @@ export const Posts = ({
 			<div className="posts-holder">
 				{posts
 					.sort(sortBy)
-					.map( (post) => <PostItem key={post.id} post={post} />)
+					.map( (post) => <PostItem
+						key={post.id}
+						post={post}
+						deleteItem={deleteItem}
+						editPost={editPost}
+					/>)
 				}
 			</div>
 			<div className="text-center">

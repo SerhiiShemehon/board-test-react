@@ -9,7 +9,9 @@ export const Column = ({
 						   posts,
 						   boardId,
 						   createColumnItem,
-						   createPostItem
+						   createPostItem,
+						   deleteItem,
+						   editPost
 }) => {
 	const sortBy = (a,b) => {
 		let c = new Date(a.date);
@@ -26,13 +28,19 @@ export const Column = ({
 					.map( (column) => <div key={column.id} className="column-item">
 						<div className="column-header">
 							{column.title}
-							<ButtonDelete type='column' id={column.id} />
+							<ButtonDelete
+								type='column'
+								id={column.id}
+								deleteItem={deleteItem}
+							/>
 						</div>
 						<div className="column-body">
 							<Posts
 								posts={posts.filter( post => post.columnId === column.id)}
 								id={column.id}
 								createPostItem={createPostItem}
+								deleteItem={deleteItem}
+								editPost={editPost}
 							/>
 						</div>
 					</div> )
